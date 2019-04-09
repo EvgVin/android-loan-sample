@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/applicationSteps"
+            app:startDestination="@id/singleSelectionFragment">
+
+    <fragment
+            android:id="@+id/singleSelectionFragment"
+            android:name="com.evgvin.loan.ui.application_steps.single_selection.SingleSelectionFragment">
+
+        <argument
+                android:name="questionId"
+                app:argType="integer"/>
+
+    </fragment>
+
+</navigation>

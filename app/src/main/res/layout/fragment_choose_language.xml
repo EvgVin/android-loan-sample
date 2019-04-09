@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.evgvin.loan.ui.intro.IntroFragment">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.evgvin.loan.ui.registration_steps.choose_language.ChooseLanguageViewModel" />
+
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_language_title"
+                style="@style/TextAppearance.Title"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/choose_language_input_vertical_margin"
+                style="@style/TextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/choose_language_hint"
+                    android:text="@{viewModel.currentLanguageName}"
+                    android:focusable="false"
+                    android:drawableEnd="@drawable/spinner_arrow"
+                    android:onClick="@{() -> viewModel.onChooseLanguageClick()}"
+                    style="@style/InputEditText"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</layout>

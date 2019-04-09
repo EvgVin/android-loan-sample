@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.evgvin.loan.data.model.Purpose" />
+
+    </data>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/languages_item_margin"
+                android:text="@{model.name}"
+                style="@style/TextAppearance.ListItem"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/languages_item_margin"
+                style="@style/DividerView"/>
+
+    </LinearLayout>
+
+</layout>

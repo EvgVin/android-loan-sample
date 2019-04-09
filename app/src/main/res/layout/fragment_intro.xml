@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.evgvin.loan.ui.intro.IntroFragment">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.evgvin.loan.ui.intro.IntroViewModel" />
+
+    </data>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <com.evgvin.loan.ui.common.DynamicHeightViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/intro_view_pager_vertical_margin"/>
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dotsIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/intro_dots_indicator_vertical_margin"
+                    android:layout_marginBottom="@dimen/intro_dots_indicator_vertical_margin"
+                    android:layout_marginStart="@dimen/intro_horizontal_margin"
+                    android:layout_marginEnd="@dimen/intro_horizontal_margin"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/ViewPagerIndicator"/>
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCreateAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intro_create_account"
+                    android:layout_marginStart="@dimen/intro_horizontal_margin"
+                    android:layout_marginEnd="@dimen/intro_horizontal_margin"
+                    android:layout_marginBottom="@dimen/intro_vertical_margin"
+                    android:onClick="@{() -> viewModel.onRegistrationClick()}"
+                    style="@style/Button.Active"/>
+
+            <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intro_log_in"
+                    android:layout_marginStart="@dimen/intro_horizontal_margin"
+                    android:layout_marginEnd="@dimen/intro_horizontal_margin"
+                    android:layout_marginBottom="@dimen/intro_vertical_margin"
+                    android:onClick="@{() -> viewModel.onLogInClick()}"
+                    style="@style/Button.Outline"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

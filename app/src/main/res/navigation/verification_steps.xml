@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            app:startDestination="@id/dateOfBirthFragment">
+
+    <fragment
+            android:id="@+id/dateOfBirthFragment"
+            android:name="com.evgvin.loan.ui.verification_steps.date_of_birth.DateOfBirthFragment">
+
+        <action
+                android:id="@+id/showGender"
+                app:destination="@id/genderFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/genderFragment"
+            android:name="com.evgvin.loan.ui.verification_steps.gender.GenderFragment">
+
+        <action
+                android:id="@+id/showHomeAddress"
+                app:destination="@+id/homeAddressFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/homeAddressFragment"
+            android:name="com.evgvin.loan.ui.verification_steps.home_address.HomeAddressFragment">
+
+        <action
+                android:id="@+id/showOccupation"
+                app:destination="@+id/occupationFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/occupationFragment"
+            android:name="com.evgvin.loan.ui.verification_steps.occupation.OccupationFragment">
+
+        <action
+                android:id="@+id/showWorkAddress"
+                app:destination="@+id/workAddressFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/workAddressFragment"
+            android:name="com.evgvin.loan.ui.verification_steps.work_address.WorkAddressFragment">
+
+        <action
+                android:id="@+id/showWorkingPeriod"
+                app:destination="@+id/workingPeriodFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/workingPeriodFragment"
+            android:name="com.evgvin.loan.ui.verification_steps.working_period.WorkingPeriodFragment"/>
+
+</navigation>

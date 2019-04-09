@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            app:startDestination="@id/paymentAmountFragment">
+
+    <fragment
+            android:id="@+id/paymentAmountFragment"
+            android:name="com.evgvin.loan.ui.payment_steps.payment_amount.PaymentAmountFragment">
+
+        <action
+                android:id="@+id/showPaymentMethod"
+                app:destination="@id/paymentMethodFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/paymentMethodFragment"
+            android:name="com.evgvin.loan.ui.payment_steps.payment_method.PaymentMethodFragment"/>
+
+</navigation>

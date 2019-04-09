@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            app:startDestination="@id/feedFragment">
+
+    <fragment
+            android:id="@+id/chatFragment"
+            android:name="com.evgvin.loan.ui.home.chat.ChatFragment"/>
+
+    <fragment
+            android:id="@+id/feedFragment"
+            android:name="com.evgvin.loan.ui.home.feed.FeedFragment"/>
+
+    <fragment
+            android:id="@+id/profileFragment"
+            android:name="com.evgvin.loan.ui.home.profile.ProfileFragment"/>
+
+</navigation>

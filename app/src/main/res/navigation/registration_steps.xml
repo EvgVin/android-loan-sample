@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            app:startDestination="@id/chooseLanguageFragment"
+            android:id="@+id/registrationSteps">
+
+    <fragment
+            android:id="@+id/chooseLanguageFragment"
+            android:name="com.evgvin.loan.ui.registration_steps.choose_language.ChooseLanguageFragment">
+
+        <action
+                android:id="@+id/showPhoneNumber"
+                app:destination="@id/phoneNumberFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/phoneNumberFragment"
+            android:name="com.evgvin.loan.ui.registration_steps.phone_number.PhoneNumberFragment">
+
+        <action
+                android:id="@+id/showPhoneConfirmation"
+                app:destination="@id/phoneConfirmationFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/phoneConfirmationFragment"
+            android:name="com.evgvin.loan.ui.registration_steps.phone_confirmation.PhoneConfirmationFragment">
+
+        <action
+                android:id="@+id/showPinCreation"
+                app:destination="@id/pinCreationFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/pinCreationFragment"
+            android:name="com.evgvin.loan.ui.registration_steps.pin_creation.PinCreationFragment">
+
+        <action
+                android:id="@+id/showPinConfirmation"
+                app:destination="@id/pinConfirmationFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/pinConfirmationFragment"
+            android:name="com.evgvin.loan.ui.registration_steps.pin_confirmation.PinConfirmationFragment">
+
+        <argument
+                android:name="createdPin"
+                app:argType="string"
+                app:nullable="true"/>
+
+        <action
+                android:id="@+id/showEmailEntering"
+                app:destination="@id/emailEnteringFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/emailEnteringFragment"
+            android:name="com.evgvin.loan.ui.registration_steps.email_entering.EmailEnteringFragment">
+
+        <action
+                android:id="@+id/showFirstName"
+                app:destination="@id/firstNameFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/firstNameFragment"
+            android:name="com.evgvin.loan.ui.registration_steps.first_name.FirstNameFragment">
+
+        <action
+                android:id="@+id/showLastName"
+                app:destination="@id/lastNameFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/lastNameFragment"
+            android:name="com.evgvin.loan.ui.registration_steps.last_name.LastNameFragment">
+
+        <action
+                android:id="@+id/showEducationLevel"
+                app:destination="@id/educationLevelFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/educationLevelFragment"
+            android:name="com.evgvin.loan.ui.registration_steps.education_level.EducationLevelFragment">
+
+        <action
+                android:id="@+id/showEmployment"
+                app:destination="@id/employmentFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/employmentFragment"
+            android:name="com.evgvin.loan.ui.registration_steps.employment.EmploymentFragment"/>
+
+</navigation>

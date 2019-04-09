@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="com.evgvin.loan.ui.intro.IntroFragment">
+
+    <data>
+
+        <import type="com.evgvin.loan.util.Utils"/>
+
+        <variable
+                name="viewModel"
+                type="com.evgvin.loan.ui.registration_steps.phone_number.PhoneNumberViewModel" />
+
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin">
+
+        <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/TextAppearance.Description"/>
+
+        <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number_title"
+                style="@style/TextAppearance.Title"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/choose_language_input_vertical_margin"
+                app:helperText="@string/phone_number_helper"
+                style="@style/TextInputLayout">
+
+            <com.evgvin.loan.ui.common.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:hint="@string/phone_number_hint"
+                    android:text="@={viewModel.phoneNumber}"
+                    android:maxLength="@{Utils.PHONE_LENGTH}"
+                    app:prefix="@string/phone_number_prefix"
+                    app:prefixPaddingEnd="@dimen/edit_text_prefix_horizontal_padding"
+                    style="@style/InputEditText"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</layout>

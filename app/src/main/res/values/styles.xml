@@ -1,0 +1,204 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorControlActivated</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="android:colorBackground">@color/colorPrimaryDark</item>
+        <item name="android:textColorLink">@color/activeTextColor</item>
+
+        <!-- Changes the font of the entire application. -->
+        <item name="android:fontFamily">@font/colfax</item>
+        <item name="fontFamily">@font/colfax</item>
+    </style>
+
+    <!-- Light theme for specific view styles -->
+    <style name="AppTheme.Light" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorAccent">@color/colorAccentLight</item>
+    </style>
+
+    <!-- Base active button -->
+    <style name="Button.Active" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="cornerRadius">@dimen/active_button_corner_radius</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:textColor">@color/activeButtonTextColor</item>
+        <item name="android:padding">@dimen/button_padding</item>
+    </style>
+
+    <!-- Base outline button -->
+    <style name="Button.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">@dimen/active_button_corner_radius</item>
+        <item name="strokeColor">@color/outlineButtonStrokeColor</item>
+        <item name="strokeWidth">@dimen/outline_button_stroke_width</item>
+        <item name="android:textColor">@color/activeTextColor</item>
+        <item name="android:padding">@dimen/button_padding</item>
+    </style>
+
+    <!-- Base active text button -->
+    <style name="Button.Text.Active" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/button_text_active</item>
+    </style>
+
+    <!-- Base button -->
+    <style name="Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/button_text</item>
+    </style>
+
+    <!-- Base header text view -->
+    <style name="TextAppearance.Header" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/titleTextColor</item>
+        <item name="android:textSize">@dimen/header_text_size</item>
+    </style>
+
+    <!-- Base subheader text view -->
+    <style name="TextAppearance.SubHeader" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/descriptionTextColor</item>
+        <item name="android:textSize">@dimen/subheader_text_size</item>
+    </style>
+
+    <!-- Base title text view -->
+    <style name="TextAppearance.Title" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/titleTextColor</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+    </style>
+
+    <!-- Base description text view -->
+    <style name="TextAppearance.Description" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/descriptionTextColor</item>
+        <item name="android:textSize">@dimen/description_text_size</item>
+    </style>
+
+    <!-- Feed item description text view -->
+    <style name="TextAppearance.Description.Feed" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/feedDescriptionTextColor</item>
+        <item name="android:textSize">@dimen/feed_description_text_size</item>
+    </style>
+
+    <!-- Feed item description text view -->
+    <style name="TextAppearance.Description.Tip" parent="TextAppearance.Description">
+        <item name="android:textColor">@color/tipDescriptionTextColor</item>
+    </style>
+
+    <!-- Base helper text view -->
+    <style name="TextAppearance.Helper" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/descriptionTextColor</item>
+        <item name="android:textSize">@dimen/helper_text_size</item>
+    </style>
+
+    <!-- Base list item text view -->
+    <style name="TextAppearance.ListItem" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/titleTextColor</item>
+        <item name="android:textSize">@dimen/list_item_text_size</item>
+    </style>
+
+    <!-- Base list item description text view -->
+    <style name="TextAppearance.ListItem.Description" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/titleTextColor</item>
+        <item name="android:textSize">@dimen/list_item_description_text_size</item>
+    </style>
+
+    <!-- Base view pager indicator -->
+    <style name="ViewPagerIndicator">
+        <item name="dotsColor">@color/inactivePagerIndicator</item>
+        <item name="selectedDotColor">@color/activePagerIndicator</item>
+        <item name="dotsWidthFactor">1</item>
+        <item name="dotsSize">@dimen/intro_dots_indicator_size</item>
+    </style>
+
+    <!-- Base dark toolbar -->
+    <style name="BaseToolbar">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <!-- Base grey toolbar -->
+    <style name="BaseToolbar.Gray">
+        <item name="android:background">@color/secondaryToolbarColor</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <!-- Base text input layout -->
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_box</item>
+    </style>
+
+    <!-- Base input edit text -->
+    <style name="InputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox"/>
+
+    <!-- Base divider view -->
+    <style name="DividerView">
+        <item name="android:minHeight">@dimen/list_item_divider_height</item>
+        <item name="android:maxHeight">@dimen/list_item_divider_height</item>
+        <item name="android:background">@color/listItemDividerColor</item>
+    </style>
+
+    <!-- Base pin view -->
+    <style name="PinView" parent="PinWidget.PinView">
+        <item name="viewType">line</item>
+        <item name="itemWidth">@dimen/pin_item_width</item>
+        <item name="lineWidth">@dimen/pin_line_width</item>
+        <item name="itemSpacing">@dimen/pin_item_spacing</item>
+        <item name="lineColor">@color/pin_line</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:textSize">@dimen/pin_text_size</item>
+    </style>
+
+    <!-- Base bottom navigation view -->
+    <style name="BottomNavigationView">
+        <item name="itemIconTint">@color/navigation_item</item>
+        <item name="itemTextColor">@color/navigation_item</item>
+        <item name="labelVisibilityMode">selected</item>
+        <item name="android:background">@color/secondaryToolbarColor</item>
+    </style>
+
+    <!-- Base card view -->
+    <style name="CardView.Feed">
+        <item name="cardBackgroundColor">@color/cardBackgroundColor</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+    </style>
+
+    <!-- Image card view -->
+    <style name="CardView.Image" parent="CardView.Feed">
+        <item name="cardCornerRadius">@dimen/feed_image_radius</item>
+    </style>
+
+    <!-- Base autocomplete text view -->
+    <style name="AutocompleteTextView" parent="InputEditText">
+        <item name="android:popupBackground">@drawable/autocomplete_popup_background</item>
+    </style>
+
+    <!-- Base circle progress view -->
+    <style name="CircleProgressView">
+        <item name="background_progress_color">@color/cardBackgroundColor</item>
+        <item name="progress_color">@color/colorPrimary</item>
+        <item name="ring_width">@dimen/profile_circle_progress_ring_width</item>
+        <item name="animated">true</item>
+        <item name="corner_edges">true</item>
+        <item name="start_angle">-215</item>
+        <item name="sweep_angle_degree">250</item>
+    </style>
+
+    <!-- Base chat message text view -->
+    <style name="TextAppearance.Chat.Message.Base" parent="TextAppearance.ListItem">
+        <item name="android:padding">@dimen/default_margin</item>
+    </style>
+
+    <style name="TextAppearance.Chat.Message.Self" parent="TextAppearance.Chat.Message.Base">
+        <item name="android:background">@drawable/message_self_background</item>
+    </style>
+
+    <style name="TextAppearance.Chat.Message.Manager" parent="TextAppearance.Chat.Message.Base">
+        <item name="android:background">@drawable/message_manager_background</item>
+    </style>
+
+    <!-- White horizontal progress view  -->
+    <style name="ProgressBar.Horizontal.White" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:minHeight">0dp</item>
+        <item name="android:theme">@style/AppTheme.Light</item>
+    </style>
+
+</resources>

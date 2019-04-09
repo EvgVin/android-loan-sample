@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="com.evgvin.loan.ui.loan_congratulations.LoanCongratulationsFragment">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.evgvin.loan.ui.loan_congratulations.LoanCongratulationsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseToolbar"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/loan_congratulations_title"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginTop="@dimen/welcome_image_vertical_margin"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/appBar"
+                style="@style/TextAppearance.Title"/>
+
+        <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/loan_congratulations_description"
+                android:layout_margin="@dimen/default_margin"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                style="@style/TextAppearance.Description"/>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription"
+                app:layout_constraintBottom_toTopOf="@id/btnSelectAmount"
+                style="@style/CardView.Feed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tvRateLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loan_congratulations_rate"
+                        android:layout_marginStart="@dimen/loan_congratulations_card_info_horizontal_margin"
+                        android:layout_marginEnd="@dimen/loan_congratulations_card_info_horizontal_margin"
+                        android:layout_marginTop="@dimen/loan_congratulations_card_info_vertical_margin"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/dividerView"
+                        style="@style/TextAppearance.Description"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/loan_congratulations_card_info_horizontal_margin"
+                        android:layout_marginEnd="@dimen/loan_congratulations_card_info_horizontal_margin"
+                        android:layout_marginTop="@dimen/loan_congratulations_card_info_vertical_margin"
+                        android:layout_marginBottom="@dimen/loan_congratulations_card_info_vertical_margin"
+                        android:text="@{viewModel.monthlyRate}"
+                        app:layout_constraintTop_toBottomOf="@id/tvRateLabel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/dividerView"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        style="@style/TextAppearance.Title"/>
+
+                <View
+                        android:id="@+id/dividerView"
+                        android:layout_width="@dimen/loan_congratulations_divider_width"
+                        android:layout_height="0dp"
+                        android:background="@color/loan_congratulations_divider"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                        android:id="@+id/tvPaybackLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/loan_congratulations_card_info_horizontal_margin"
+                        android:layout_marginEnd="@dimen/loan_congratulations_card_info_horizontal_margin"
+                        android:layout_marginTop="@dimen/loan_congratulations_card_info_vertical_margin"
+                        android:text="@string/loan_congratulations_payback"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/dividerView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        style="@style/TextAppearance.Description"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/loan_congratulations_card_info_horizontal_margin"
+                        android:layout_marginEnd="@dimen/loan_congratulations_card_info_horizontal_margin"
+                        android:layout_marginTop="@dimen/loan_congratulations_card_info_vertical_margin"
+                        android:layout_marginBottom="@dimen/loan_congratulations_card_info_vertical_margin"
+                        android:text="@{viewModel.payback}"
+                        app:layout_constraintTop_toBottomOf="@id/tvPaybackLabel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/dividerView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        style="@style/TextAppearance.Title"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSelectAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/loan_congratulations_amount"
+                android:layout_marginStart="@dimen/intro_horizontal_margin"
+                android:layout_marginEnd="@dimen/intro_horizontal_margin"
+                android:layout_marginBottom="@dimen/intro_vertical_margin"
+                android:onClick="@{() -> viewModel.onSelectAmountClick()}"
+                app:layout_constraintBottom_toTopOf="@id/btnNotNow"
+                style="@style/Button.Active"/>
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNotNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/loan_congratulations_not_now"
+                android:layout_marginStart="@dimen/intro_horizontal_margin"
+                android:layout_marginEnd="@dimen/intro_horizontal_margin"
+                android:layout_marginBottom="@dimen/intro_vertical_margin"
+                android:onClick="@{() -> viewModel.onNotNowClick()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/Button.Outline"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

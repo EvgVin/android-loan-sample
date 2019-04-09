@@ -1,0 +1,14 @@
+[
+  {"id":0, "name":"Undertaking a professional course"},
+  {"id":1, "name":"To provide for child's education"},
+  {"id":2, "name":"Weddings and family functions"},
+  {"id":3, "name":"Financing a vacation"},
+  {"id":4, "name":"Refinance Credit Card dues"},
+  {"id":5, "name":"Down payments for cars, bikes etc"},
+  {"id":6, "name":"Home renovations or refurbishing"},
+  {"id":7, "name":"Consolidate ingoing loans"},
+  {"id":8, "name":"Cost of switching jobs"},
+  {"id":9, "name":"Medical emergencies"},
+  {"id":10, "name":"Appliance or electronic product"},
+  {"id":11, "name":"Other"}
+]

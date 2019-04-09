@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'androidx.navigation.safeargs'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "evgvin.com.beyond"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+configurations {
+    all*.exclude group: 'com.google.guava', module: 'listenablefuture'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "androidx.appcompat:appcompat:$appcompatLibraryVersion"
+    implementation "androidx.core:core-ktx:$ktxLibraryVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "com.android.support:multidex:$multiDexVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "com.google.android.libraries.places:places:$placesVersion"
+    implementation "com.tbuonomo.andrui:viewpagerdotsindicator:$viewPagerDotsIndicatorVersion"
+    implementation "com.github.tbruyelle:rxpermissions:$rxpermissionsVersion"
+    implementation "net.cachapa.expandablelayout:expandablelayout:$expandableLayoutVersion"
+    implementation "com.priyankvasa.android:cameraview-ex:$cameraViewVersion"
+    implementation "com.github.flepsik:progress-ring-view:$progressRingViewVersion"
+    implementation project(':pinview')
+
+    // Tests
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test:runner:$runnerVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+
+    // Reactive
+    implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.rxjava2Version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+
+    // Dependency injection
+    implementation "com.google.dagger:dagger:$dagger2Version"
+    implementation "com.google.dagger:dagger-android-support:$dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger2Version"
+    kapt "com.google.dagger:dagger-compiler:$dagger2Version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger2Version"
+
+    // Retrofit 2
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$retrofitRxAdapterVersion"
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycleVersion"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
+    // Navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:$navigationVersion"
+    implementation "android.arch.navigation:navigation-ui-ktx:$navigationVersion"
+}

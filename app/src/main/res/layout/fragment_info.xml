@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.evgvin.loan.ui.intro.IntroFragment">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.evgvin.loan.ui.intro.info.InfoViewModel" />
+
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/info_horizontal_margin"
+            android:paddingEnd="@dimen/info_horizontal_margin"
+            android:gravity="center_horizontal">
+
+        <ImageView
+                android:layout_width="168dp"
+                android:layout_height="222dp"
+                android:layout_marginTop="@dimen/info_image_vertical_margin"
+                android:layout_marginBottom="@dimen/info_image_vertical_margin"
+                android:background="@android:color/darker_gray"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.title}"
+                style="@style/TextAppearance.Title"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/info_description_vertical_margin"
+                android:text="@{viewModel.description}"
+                style="@style/TextAppearance.Description"/>
+
+    </LinearLayout>
+
+</layout>

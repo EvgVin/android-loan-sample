@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#D23307</color>
+    <color name="colorControlActivated">#F94816</color>
+
+    <!--For light theme-->
+    <color name="colorAccentLight">#ffffff</color>
+
+    <!--Base-->
+    <color name="secondaryToolbarColor">#FF131313</color>
+
+    <color name="activeButtonTextColor">#FAFAFA</color>
+    <color name="activeTextColor">#EE4212</color>
+    <color name="textColor">#ffffff</color>
+    <color name="outlineButtonStrokeColor">#FFFFFF</color>
+    <color name="textButtonUnEnabledTextColor">#61FFFFFF</color>
+
+    <color name="titleTextColor">#FFFFFF</color>
+    <color name="descriptionTextColor">#99FFFFFF</color>
+    <color name="feedDescriptionTextColor">#ffffff</color>
+    <color name="tipDescriptionTextColor">#ffffff</color>
+    <color name="captionTextColor">#ffffff</color>
+
+    <color name="activePagerIndicator">#F0582E</color>
+    <color name="inactivePagerIndicator">#303030</color>
+
+    <color name="inputBoxStrokeColor">#ffffff</color>
+    <color name="inputBoxHintColor">#ffffff</color>
+
+    <color name="listItemDividerColor">#ffffff</color>
+
+    <color name="pinActiveLineColor">#ffffff</color>
+    <color name="pinInactiveLineColor">#767676</color>
+
+    <color name="menuItemUnselectedColor">#8Affffff</color>
+    <color name="menuItemSelectedColor">#ffffff</color>
+
+    <color name="cardBackgroundColor">#131313</color>
+
+    <color name="popupBackgroundColor">#3A3A3A</color>
+
+    <color name="selfieBorderColor">#4D000000</color>
+
+    <!--Loan Congratulations-->
+    <color name="loan_congratulations_divider">#000000</color>
+
+</resources>

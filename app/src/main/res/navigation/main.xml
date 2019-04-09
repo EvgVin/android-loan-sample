@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/main_nav_graph"
+            app:startDestination="@id/introFragment">
+
+    <fragment
+            android:id="@+id/introFragment"
+            android:name="com.evgvin.loan.ui.intro.IntroFragment">
+
+        <action
+                android:id="@+id/showRegistration"
+                app:destination="@id/registrationStepsFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+        <action
+                android:id="@+id/showLogIn"
+                app:destination="@id/logInStepsFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/infoFragment"
+            android:name="com.evgvin.loan.ui.intro.info.InfoFragment">
+
+        <argument
+                android:name="title"
+                app:argType="reference"/>
+
+        <argument
+                android:name="description"
+                app:argType="reference"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/logInStepsFragment"
+            android:name="com.evgvin.loan.ui.log_in_steps.LogInStepsFragment">
+
+        <action
+                android:id="@+id/showHome"
+                app:destination="@+id/homeFragment"
+                app:launchSingleTop="true"
+                app:popUpTo="@+id/main_nav_graph"
+                app:popUpToInclusive="true"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/registrationStepsFragment"
+            android:name="com.evgvin.loan.ui.registration_steps.RegistrationStepsFragment">
+
+        <action
+                android:id="@+id/showLanguages"
+                app:destination="@+id/languagesFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+        <action
+                android:id="@+id/showAllowPermissions"
+                app:destination="@+id/allowPermissionsFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/languagesFragment"
+            android:name="com.evgvin.loan.ui.languages.LanguagesFragment"
+            android:label="@string/languages_title"/>
+
+    <fragment
+            android:id="@+id/allowPermissionsFragment"
+            android:name="com.evgvin.loan.ui.allow_permissions.AllowPermissionsFragment">
+
+        <action
+                android:id="@+id/showWelcome"
+                app:destination="@+id/welcomeFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/welcomeFragment"
+            android:name="com.evgvin.loan.ui.welcome.WelcomeFragment">
+
+        <action
+                android:id="@+id/showVerification"
+                app:destination="@+id/verificationFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+        <action
+                android:id="@+id/showHome"
+                app:destination="@+id/homeFragment"
+                app:launchSingleTop="true"
+                app:popUpTo="@+id/main_nav_graph"
+                app:popUpToInclusive="true"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/verificationFragment"
+            android:name="com.evgvin.loan.ui.verification_steps.VerificationStepsFragment">
+
+        <action
+                android:id="@+id/showSelfie"
+                app:destination="@id/selfieFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.evgvin.loan.ui.home.HomeFragment">
+
+        <action
+                android:id="@+id/showApplicationIntro"
+                app:destination="@+id/applicationIntroFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+        <action
+                android:id="@+id/showTip"
+                app:destination="@+id/tipFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/helpFragment"
+            android:name="com.evgvin.loan.ui.help.HelpFragment"/>
+
+    <fragment
+            android:id="@+id/tipFragment"
+            android:name="com.evgvin.loan.ui.tip.TipFragment"/>
+
+    <fragment
+            android:id="@+id/applicationIntroFragment"
+            android:name="com.evgvin.loan.ui.application_intro.ApplicationIntroFragment">
+
+        <action
+                android:id="@+id/showApplicationSteps"
+                app:destination="@id/applicationStepsFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/selfieFragment"
+            android:name="com.evgvin.loan.ui.selfie.SelfieFragment">
+
+        <action
+                android:id="@+id/showSelfiePreview"
+                app:destination="@id/selfiePreviewFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/selfiePreviewFragment"
+            android:name="com.evgvin.loan.ui.selfie_preview.SelfiePreviewFragment">
+
+        <action
+                android:id="@+id/showIdentityVerified"
+                app:destination="@id/identityVerifiedFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/identityVerifiedFragment"
+            android:name="com.evgvin.loan.ui.identity_verified.IdentityVerifiedFragment">
+
+        <action
+                android:id="@+id/showApplicationIntro"
+                app:destination="@id/applicationIntroFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/loanPurposeFragment"
+            android:name="com.evgvin.loan.ui.loan_purpose.LoanPurposeFragment"
+            android:label="@string/loan_purpose_title">
+
+        <action
+                android:id="@+id/showLoanPurposeDetailedSteps"
+                app:destination="@id/loanPurposeDetailedStepsFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/loanPurposeDetailedStepsFragment"
+            android:name="com.evgvin.loan.ui.loan_purpose_detailed_steps.LoanPurposeDetailedStepsFragment">
+
+        <argument
+                android:name="purposeId"
+                app:argType="integer"/>
+
+        <action
+                android:id="@+id/showLoanCongratulations"
+                app:destination="@id/loanCongratulationsFragment"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/loanCongratulationsFragment"
+            android:name="com.evgvin.loan.ui.loan_congratulations.LoanCongratulationsFragment">
+
+        <action
+                android:id="@+id/showPaymentSteps"
+                app:destination="@id/paymentStepsFragment"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/paymentStepsFragment"
+            android:name="com.evgvin.loan.ui.payment_steps.PaymentStepsFragment"/>
+
+    <fragment
+            android:id="@+id/applicationStepsFragment"
+            android:name="com.evgvin.loan.ui.application_steps.ApplicationStepsFragment">
+
+        <action
+                android:id="@+id/showLoanPurpose"
+                app:destination="@id/loanPurposeFragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <!--<fragment-->
+            <!--android:id="@+id/userFragment"-->
+            <!--android:name="com.android.example.github.ui.user.UserFragment"-->
+            <!--android:label="UserFragment" >-->
+        <!--<argument-->
+                <!--android:name="login"-->
+                <!--app:argType="string"/>-->
+        <!--<argument-->
+                <!--android:name="avatarUrl"-->
+                <!--android:defaultValue="@null"-->
+                <!--app:argType="string"-->
+                <!--app:nullable="true" />-->
+        <!--<action-->
+                <!--android:id="@+id/showRepo"-->
+                <!--app:destination="@id/repoFragment" />-->
+    <!--</fragment>-->
+
+</navigation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            app:startDestination="@id/purposeDescriptionFragment">
+
+    <fragment
+            android:id="@+id/purposeDescriptionFragment"
+            android:name="com.evgvin.loan.ui.loan_purpose_detailed_steps.purpose_description.PurposeDescriptionFragment">
+
+        <action
+                android:id="@+id/showOutstandingLoans"
+                app:destination="@id/outstandingLoansFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/outstandingLoansFragment"
+            android:name="com.evgvin.loan.ui.loan_purpose_detailed_steps.outstanding_loans.OutstandingLoansFragment"/>
+
+</navigation>

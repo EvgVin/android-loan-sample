@@ -1,0 +1,7 @@
+[
+  {"id":0, "name":"Farmer"},
+  {"id":1, "name":"Account manager"},
+  {"id":2, "name":"Director"},
+  {"id":3, "name":"Driver"},
+  {"id":4, "name":"Dron"}
+]

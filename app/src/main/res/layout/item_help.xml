@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="com.evgvin.loan.ui.help.HelpViewHolder">
+
+    <data>
+
+        <variable
+                name="model"
+                type="com.evgvin.loan.data.model.Help" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground">
+
+        <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                app:srcCompat="@drawable/expand_arrow"
+                app:layout_constraintTop_toTopOf="@id/tvQuestion"
+                app:layout_constraintBottom_toBottomOf="@id/tvQuestion"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_margin"
+                android:text="@{model.question}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivArrow"
+                style="@style/TextAppearance.ListItem"/>
+
+        <View
+                android:id="@+id/dividerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                app:layout_constraintTop_toBottomOf="@id/tvQuestion"
+                style="@style/DividerView"/>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandableAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/dividerView">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="@{model.answer}"
+                    style="@style/TextAppearance.ListItem.Description"/>
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

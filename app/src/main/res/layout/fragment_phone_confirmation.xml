@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="com.evgvin.loan.ui.intro.IntroFragment">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.evgvin.loan.ui.registration_steps.phone_confirmation.PhoneConfirmationViewModel" />
+
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin">
+
+        <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_confirmation_description"
+                style="@style/TextAppearance.Description"/>
+
+        <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_confirmation_title"
+                android:layout_marginTop="@dimen/default_margin"
+                style="@style/TextAppearance.Title"/>
+
+        <com.chaos.view.PinView
+                android:id="@+id/pinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/phone_confirmation_pin_vertical_margin"
+                android:inputType="number"
+                android:text="@={viewModel.confirmationCode}"
+                android:layout_gravity="center_horizontal"
+                app:itemCount="@{viewModel.CONFIRMATION_CODE_LENGTH}"
+                style="@style/PinView"/>
+
+        <TextView
+                android:id="@+id/tvHelper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/phone_confirmation_helper_vertical_margin"
+                android:gravity="center_horizontal"
+                style="@style/TextAppearance.Helper"/>
+
+    </LinearLayout>
+
+</layout>

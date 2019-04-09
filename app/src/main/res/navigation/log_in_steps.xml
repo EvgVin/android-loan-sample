@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            app:startDestination="@id/phoneFragment">
+
+    <fragment
+            android:id="@+id/phoneFragment"
+            android:name="com.evgvin.loan.ui.log_in_steps.phone.PhoneFragment">
+
+        <action
+                android:id="@+id/showConfirmation"
+                app:destination="@id/confirmationFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/confirmationFragment"
+            android:name="com.evgvin.loan.ui.log_in_steps.confirmation.ConfirmationFragment">
+
+        <action
+                android:id="@+id/showPin"
+                app:destination="@id/pinFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@android:anim/slide_in_left"
+                app:popExitAnim="@android:anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/pinFragment"
+            android:name="com.evgvin.loan.ui.log_in_steps.pin.PinFragment"/>
+
+</navigation>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.evgvin.loan.ui.intro.IntroFragment">
+
+    <data>
+
+        <import type="com.evgvin.loan.util.Utils"/>
+
+        <variable
+                name="viewModel"
+                type="com.evgvin.loan.ui.registration_steps.email_entering.EmailEnteringViewModel" />
+
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin">
+
+        <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email_entering_title"
+                style="@style/TextAppearance.Title"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/choose_language_input_vertical_margin"
+                style="@style/TextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email_entering_hint"
+                    android:text="@={viewModel.email}"
+                    android:maxLength="@{Utils.EMAIL_LENGTH}"
+                    style="@style/InputEditText"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+                android:id="@+id/tvHelper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                style="@style/TextAppearance.Helper"/>
+
+    </LinearLayout>
+
+</layout>
